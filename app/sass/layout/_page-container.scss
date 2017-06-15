@@ -98,7 +98,19 @@
       }
 
       .l-siteLogoPanel {
-        background-color: lightblue;
+        // background-color: lightblue;
+        padding: 0 20px;
+        flex: 1;
+
+        .siteLogo {
+          font-family: Raleway,Helvetica,sans-serif;
+          font-size: 3.2rem;
+          font-weight: 700;
+          text-align: center;
+          text-transform: uppercase;
+          color: #000;
+          letter-spacing: .2px;
+        }
       }
 
       .l-siteMenuPanel {
