@@ -1,5 +1,15 @@
 .l-pageFooter {
-  border: solid 2px tomato;
+  background-color: rgba(177, 103, 103, 0.13);
 
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .l-footerSection.footerSection--termsPrivacy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
 }

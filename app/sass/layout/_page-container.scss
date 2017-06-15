@@ -73,7 +73,8 @@
       // height: 90px;
       // width: 100%;
       background-color: #fff;
-      padding: 1.5rem 3rem;
+      padding: 1.5rem 1.5rem;
+      // padding: 1.5rem 3rem;
 
       display: flex;
       justify-content: space-between;
@@ -99,12 +100,16 @@
 
       .l-siteLogoPanel {
         // background-color: lightblue;
-        padding: 0 20px;
+        // padding: 0 15px;
+        // padding: 0 20px;
+        margin: 0 auto;
+        
         flex: 1;
 
         .siteLogo {
           font-family: Raleway,Helvetica,sans-serif;
-          font-size: 3.2rem;
+          font-size: 2.7rem;
+          // font-size: 3.2rem;
           font-weight: 700;
           text-align: center;
           text-transform: uppercase;
