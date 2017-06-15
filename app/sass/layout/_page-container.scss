@@ -106,15 +106,27 @@
         
         flex: 1;
 
+        // .siteLogo {
+        //   font-family: Raleway,Helvetica,sans-serif;
+        //   font-size: 2.7rem;
+        //   // font-size: 3.2rem;
+        //   font-weight: 700;
+        //   text-align: center;
+        //   text-transform: uppercase;
+        //   color: #000;
+        //   letter-spacing: .2px;
+        // }
+
         .siteLogo {
-          font-family: Raleway,Helvetica,sans-serif;
-          font-size: 2.7rem;
-          // font-size: 3.2rem;
-          font-weight: 700;
-          text-align: center;
-          text-transform: uppercase;
-          color: #000;
-          letter-spacing: .2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          .imageResponsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
         }
       }
 
