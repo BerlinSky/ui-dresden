@@ -1,11 +1,48 @@
-doctype
-html
-  head
-    title Webpack2 Setup - Service Page
+extends layouts/layout-with-util-nav
 
-  body
-    img(src="images/color-palette.png" alt="")
-    h3 Set up a web site: a service page...
-    .contentWrapper.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ex, nemo labore. Rerum optio dolorem sit, fuga quia ipsum, saepe pariatur voluptatem aspernatur assumenda quaerat, enim architecto error reiciendis beatae quo illum accusantium autem magnam, dignissimos sapiente debitis ipsa earum natus. Assumenda ipsum numquam cum repellat quos voluptatem itaque temporibus.
- 
+block pageTitle
+  title Landing 
+
+block pageContent
+
+  .l-contentContainer.contentContainer.contentContainer--newsContent
+    .newHeaderPanel
+      h2 News
+      .divider.divider--solid
+
+    .tourNewsPanel
+      .tourNewsBox
+        h3 Tour Dates
+        h4 Upcoming Tour Dates
+        .imageFrame
+          img(alt='img' src='./images/header-border.png').imageResponsive
+        .tourDateAndVenue
+          .tourDate
+            .tourMonth Apr
+            .tourDay 06
+          .tourLocation
+            .tourLocation__city St. Louis, MO
+            .tourLocation__name The Pageant
+        a.siteButton.siteButton--default(href="/tour") More &gt;&gt;
+
+    .otherNewsPanel
+      h3 Other News
+      .divider.divider--solid
+      
+      .newsList
+        .newsListItem
+          a(href="/news?title=chanterelle") A Room of One's Own
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") Chanterelle
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") A Room of One's Own
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") Chanterelle
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
