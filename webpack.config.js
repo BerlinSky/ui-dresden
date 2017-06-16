@@ -87,7 +87,6 @@ const fontRules = {
 
 const sassRules = {
   test: /\.scss$/,
-  exclude: /node_modules/,
   use: extractPlugin.extract({
     use: [
       { 
