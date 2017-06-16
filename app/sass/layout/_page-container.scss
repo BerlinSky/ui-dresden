@@ -1,12 +1,17 @@
 .l-pageContainer {
 	// height: 100vh;
-  min-width: 320px;
+  // min-width: 320px;
+
+  // Mobile-first settings:
+  max-width: 736px;
+  margin: 5vh auto 5vh auto;
 
 	display: flex;
 
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
   // flex-wrap: wrap;
 	// flex-direction: row;
   // align-content: space-between;
@@ -232,11 +237,11 @@
   // }
 }
 
-.l-pageContainer.pageContainer {
+// .l-pageContainer.pageContainer {
 	/* fix for firefox autocomplete positioning */
-	position: absolute;
-	width: 100%;
-}
+	// position: absolute;
+	// width: 100%;
+// }
 
 .l-contentFooterContainer {
   margin: 0;
