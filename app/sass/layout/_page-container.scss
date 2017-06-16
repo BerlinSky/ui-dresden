@@ -1,5 +1,5 @@
 .l-pageContainer {
-	// height: 100vh;
+	height: 90vh;
   // min-width: 320px;
 
   // Mobile-first settings:
@@ -16,16 +16,27 @@
 	// flex-direction: row;
   // align-content: space-between;
 
+  // * {
+  //   flex:1 1 auto;
+  // }
+
+  .l-pageContentWraper {
+    margin: 0;
+    
+    overflow-y: auto;
+  }
+
 	.l-pageHeader {
     // border: solid 2px tomato;
-
+    padding: 1px 0;
+    // flex: 1;
     // flex-grow: 1;
     // flex-basis: 100%;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: stretch;
+    display: block;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-around;
+		// align-items: stretch;
 
     .l-utilNavContainer {
       // border: solid 2px greenyellow;
@@ -55,7 +66,7 @@
         background-color: #a01212;
 
         flex-basis: 100%;
-        padding: .65rem 25% .65rem 20%;
+        padding: 1rem 20% 1rem 20%;
 
         // flex-basis: 80%;
 
@@ -170,6 +181,9 @@
     }
 
     .l-menuWrapper {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+
       flex: 1;
 
       display: flex;
@@ -211,31 +225,34 @@
 
 	}
 
-  .l-contentSection {
-    border: solid 2px yellowgreen;
-
-    height: 485px;
-    width: 100%;
-  }
 
   .l-pageContentWrapper {
-    flex: 1;
-    flex-basis: 100%;
+    // flex: 1;
+    // flex-basis: 100%;
 
     // align-self: stretch;
 
     display: flex;
     flex-direction: column;
 
-    .l-contentContainer {
-      flex: 1;
+    // .l-contentContainer {
+    //   flex: 1;
+    // }
+    .l-contentSection {
+      border: solid 2px yellowgreen;
+
+      height: 485px;
+      width: 100%;
     }
+
+  
   }
 
   // .l-pageFooter {
   //   flex-basis: 100%;
   // }
 }
+
 
 // .l-pageContainer.pageContainer {
 	/* fix for firefox autocomplete positioning */
@@ -247,10 +264,10 @@
   margin: 0;
 }
 
-.l-fixed-header .l-pageContentWrapper {
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-}
+// .l-fixed-header .l-pageContentWrapper {
+// 	overflow-y: auto;
+// 	-webkit-overflow-scrolling: touch;
+// }
 
 .l-contentHeaderContainer {
 
