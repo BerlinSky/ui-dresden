@@ -1,0 +1,202 @@
+	.l-pageHeader {
+    // border: solid 2px tomato;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1000;
+    // flex: 1;
+    // flex-grow: 1;
+    // flex-basis: 100%;
+    display: block;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-around;
+		// align-items: stretch;
+
+    .l-utilNavContainer {
+      // border: solid 2px greenyellow;
+
+      // height: 90px;
+      // width: 100%;
+
+      display: flex;
+      align-items: center;
+
+      justify-content: space-around;
+      @include break(md) {
+        justify-content: space-between;
+      }
+
+      .l-utilityMenuPanel {
+        // background-color: lightblue;
+
+        display: none;
+
+        @include break(md) {
+          display: block;
+        }
+      }
+
+      .l-socialNetworkPanel {
+        background-color: #a01212;
+
+        flex-basis: 100%;
+        padding: 1rem 20% 1rem 20%;
+
+        // flex-basis: 80%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a.socialLink {
+          flex: 0 0;
+          color: #fff;
+          text-decoration: none;
+          border-bottom: none;
+        }
+      }
+    }
+
+    .l-siteNavContainer  {
+      // border: solid 2px blueviolet;
+
+      // height: 90px;
+      // width: 100%;
+      background-color: #fff;
+      padding: 1.5rem 1.5rem;
+      // padding: 1.5rem 3rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .l-hamburgerPanel {
+        // background-color: lightcoral;
+
+        .hamburgerMenuLink {
+          .hamburgerMenuLink--bar {
+            width: 35px;
+            height: 7px;
+            background-color: black;
+            margin: 6px 0;
+          }
+        }
+
+        display: block;
+        @include break(md) {
+          display: none;
+        }
+      }
+
+      .l-siteLogoPanel {
+        // background-color: lightblue;
+        // padding: 0 15px;
+        // padding: 0 20px;
+        margin: 0 auto;
+        
+        flex: 1;
+
+        // .siteLogo {
+        //   font-family: Raleway,Helvetica,sans-serif;
+        //   font-size: 2.7rem;
+        //   // font-size: 3.2rem;
+        //   font-weight: 700;
+        //   text-align: center;
+        //   text-transform: uppercase;
+        //   color: #000;
+        //   letter-spacing: .2px;
+        // }
+
+        .siteLogo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .imageResponsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .l-siteMenuPanel {
+        background-color: lightcoral;
+
+        display: none;
+        @include break(md) {
+          display: block;
+        }
+      }
+    }
+
+		@include break(md) {
+      // flex-direction: row;
+			justify-content: space-between;
+		}
+
+    .l-navContainer {
+      border: solid 2px greenyellow;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .l-logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        @include break(md) {
+          flex: 1;
+        }
+      }
+    }
+
+    .l-menuWrapper {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+
+      @include break(md) {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .l-menuContainer {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        @include break(md) {
+          display: block;
+        }
+
+        margin: 0;
+      }
+
+      .l-menuContainer.js-l-mobile {
+        display: none;
+
+        @include break(md) {
+          display: block;
+        }
+      }
+    }
+
+	}
