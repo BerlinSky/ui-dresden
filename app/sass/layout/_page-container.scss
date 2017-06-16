@@ -37,7 +37,7 @@
       }
 
       .l-utilityMenuPanel {
-        background-color: lightblue;
+        // background-color: lightblue;
 
         display: none;
 
@@ -50,7 +50,7 @@
         background-color: #a01212;
 
         flex-basis: 100%;
-        padding: 1.5rem 4rem;
+        padding: .65rem 25% .65rem 20%;
 
         // flex-basis: 80%;
 
@@ -59,6 +59,7 @@
         align-items: center;
 
         a.socialLink {
+          flex: 0 0;
           color: #fff;
           text-decoration: none;
           border-bottom: none;
