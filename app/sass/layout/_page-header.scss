@@ -76,27 +76,49 @@
       justify-content: space-between;
       align-items: center;
 
-      .l-hamburgerPanel {
-        // background-color: lightcoral;
-        // margin: 0 1.5rem;
-        // padding: 0 .5rem;
-        
-        margin-left: 2rem;
-        position: relative;
-        width: 72px;
-        height: auto;
+      a.hamburgerPanel {
+        display: block;
+        border-bottom: none;
+        cursor: pointer;
 
+        .hamburgerMenuLink {
+          display: block;
+          margin-left: 2rem;
+          position: relative;
+          width: 72px;
+          height: auto;
 
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-
-        .svg-mobileMenu  {
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform: translateY(-25%);
+          .svg-mobileMenu  {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-25%);
+          }
         }
+
+        &.s-showMenu .hamburgerMenuLink {
+          display: none;
+        }
+
+        .hamburgerCancelMenuLink { 
+          display: none;
+        }
+
+        &.s-showMenu .hamburgerCancelMenuLink {
+          display: block;
+          margin-left: 1rem;
+          margin-right: 1.2rem;
+          position: relative;
+          width: 35px;
+          height: auto;
+
+          .svg-mobileMenu  {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-50%);
+          }
+        }        
         // .hamburgerMenuLink {
         //   .hamburgerMenuLink--bar {
         //     width: 35px;
@@ -112,20 +134,7 @@
         // }
       }
 
-      .l-hamburgerPanel--cancel {
-        margin-left: 1rem;
-        margin-right: 1.2rem;
-        position: relative;
-        width: 35px;
-        height: auto;
-
-        .svg-mobileMenu--cancel  {
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform: translateY(-50%);
-        }
-      }
+      
 
       .l-siteLogoPanel {
         // background-color: lightblue;
