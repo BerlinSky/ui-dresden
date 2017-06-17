@@ -83,6 +83,8 @@
         position: relative;
         width: 72px;
         height: auto;
+
+
         // display: flex;
         // justify-content: center;
         // align-items: center;
@@ -106,6 +108,21 @@
         // @include break(md) {
         //   display: none;
         // }
+      }
+
+      .l-hamburgerPanel--cancel {
+        margin-left: 1rem;
+        margin-right: 1.2rem;
+        position: relative;
+        width: 35px;
+        height: auto;
+
+        .svg-mobileMenu--cancel  {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translateY(-50%);
+        }
       }
 
       .l-siteLogoPanel {
