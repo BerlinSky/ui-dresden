@@ -72,6 +72,7 @@ const tsRules = {
 
 const fontRules = {
   test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+  exclude: '/app/images/',
   use: [
     { 
       loader: 'file-loader',
@@ -83,10 +84,9 @@ const fontRules = {
   ]
 }
 
-
-
 const sassRules = {
   test: /\.scss$/,
+  exclude: /node_modules/,
   use: extractPlugin.extract({
     use: [
       { 
@@ -131,7 +131,7 @@ const pugRules = {
 }
 
 const imageRules = {
-  test: /\.(jpg|png|ico|svg)$/,
+  test: /\.(jpg|png|ico)$/,
   exclude: /node_modules/,
   use: [
     {
