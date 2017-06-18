@@ -82,6 +82,10 @@
         cursor: pointer;
 
         .hamburgerMenuLink {
+          transition-timing-function: ease-out;
+          transition: 2.5s;
+          transform: translateX(0);
+
           display: block;
           margin-left: 2rem;
           position: relative;
@@ -97,19 +101,31 @@
         }
 
         &.s-showMenu .hamburgerMenuLink {
-          display: none;
+          // display: none;
+          transition-timing-function: ease-in;
+          transition: 2s;
+          transform: translateX(-150%);
         }
 
         .hamburgerCancelMenuLink { 
-          display: none;
+          // display: none;
+          // transform: translateX(-150%);
+          transition-timing-function: ease-out;
+          transition: 2s;
+          max-width: 0;
         }
 
         &.s-showMenu .hamburgerCancelMenuLink {
+          transition-timing-function: ease-out;
+          transition: max-width 3.5s;
+          // transform: translateX(0);
+
           display: block;
           margin-left: 1rem;
           margin-right: 1.2rem;
           position: relative;
           width: 35px;
+          max-width: 35px;
           height: auto;
 
           .svg-mobileMenu  {
