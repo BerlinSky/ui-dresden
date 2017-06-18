@@ -44,6 +44,9 @@ body {
 		z-index: -1;
 		transition: 0.3s $ease;
 	}
+	&:hover:before {
+		background: $nav-hover;
+	}
 }
 
 header {
@@ -107,5 +110,86 @@ header {
 				transform: translateY(-5px) rotate(-45deg);
 			}
 		}
+	}
+
+	#platten {
+		font-size: 100px;
+		font-weight: 700;
+		color: $white;
+		position: absolute;
+		left: 20vw;
+		top: 15%;
+
+		&:before {
+			content: "";
+			position: absolute;
+			@include size(110%, 60px);
+			background: $nav-hover;
+			bottom: -10px;
+			left: -5%;
+			border-radius: 60px;
+			z-index: -1;
+		}
+	}
+
+	img {
+		width: 500px;
+		@extend .center;
+		top: 60%;
+	}
+
+	#headline {
+		color: $white;
+		font-size: 30px;
+		line-height: 35px;
+		text-align: left;
+		@extend .center;
+		left: 40vw;
+		top: 65%;
+
+		&:before {
+			content: "";
+			position: absolute;
+			@include size(60px, 4px);
+			background: #fff;
+			top: 22%;
+			left: -25%;
+		}
+
+		&:after {
+			content: "available in many colors";
+			position: absolute;
+			top: 110%;
+			left: 0;
+			font-size: 20px;
+			letter-spacing: 1px;
+		}
+	}
+
+	button {
+		margin-top: 80vh;
+		@include size(140px, 50px);
+		background: #c5e2cc;
+		border: none;
+		font-weight: 600;
+		border-radius: 5px;
+		font-size: 1.0rem;
+	}
+
+	#left, #right {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: #c5e2cc;
+		@include size(60px, 60px);
+		border-radius: 50%;
+		cursor: pointer;
+		i {
+			line-height: 60px;
+		}
+	}
+
+	#right {
+		right: 7%;
 	}
 }
