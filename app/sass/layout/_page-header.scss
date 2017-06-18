@@ -82,12 +82,18 @@
         cursor: pointer;
 
         .hamburgerMenuLink {
-          transition-timing-function: ease-out;
-          transition: 2.5s;
-          transform: translateX(0);
+          // transition-timing-function: ease-out;
+          // transition: 2.5s;
+          // transform: translateX(0);
+          transform: rotate(0deg);
+          transform-origin: 25% 50%;
+          transition-timing-function: ease;
+          transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+          transition: 2s;
 
           display: block;
-          margin-left: 2rem;
+          margin-left: 1rem;
+          
           position: relative;
           width: 72px;
           height: auto;
@@ -101,28 +107,32 @@
         }
 
         &.s-showMenu .hamburgerMenuLink {
-          // display: none;
-          transition-timing-function: ease-in;
-          transition: 2s;
-          transform: translateX(-150%);
+            transform: rotate(270deg);
+            transform-origin: 25% 50%;
+
+            transition-timing-function: ease;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+            transition: 2s;
         }
 
         .hamburgerCancelMenuLink { 
-          // display: none;
+          display: none;
           // transform: translateX(-150%);
-          transition-timing-function: ease-out;
-          transition: 2s;
-          max-width: 0;
+          // transition-timing-function: ease-out;
+          // transition: 2s;
+          // max-width: 0;
         }
 
         &.s-showMenu .hamburgerCancelMenuLink {
-          transition-timing-function: ease-out;
-          transition: max-width 3.5s;
+          // transition-timing-function: ease-out;
+          // transition: max-width 3.5s;
           // transform: translateX(0);
+          display: none;
 
-          display: block;
+          // display: block;
           margin-left: 1rem;
           margin-right: 1.2rem;
+
           position: relative;
           width: 35px;
           max-width: 35px;
