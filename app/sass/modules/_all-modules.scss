@@ -1,29 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
-$font: 'Cabin', sans-serif;
+$font: 'Open Sans', sans-serif;
+
+::-webkit-scrollbar {
+	display: none;
+}
 
 @mixin size($width, $height) {
 	width: $width;
 	height: $height;
 }
 
-$ease: cubic-besier(.63, -0.18, .44, 1.17);
-$header-bg: #a2c2ab;
-$header-circle-bg: #9bbba4;
-$shapes: #a9c4b1;
-$white: #fff;
-$nav-hover: #b2cdba;
-
-body {
-	background: $header-bg;
-	font-family: $font;
-	overflow: hidden;
-}
-
-* {
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
+@mixin shadow($size) {
+	box-shadow: 0 0 $size rgba(0, 0, 0, 0.3);
 }
 
 .center {
@@ -33,163 +22,162 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.nav-hover {
-	&:before {
-		content: "";
-		position: absolute;
-		@include size(120%, 10px);
-		bottom: 0;
-		left: -10%;
-		border-radius: 60px;
-		z-index: -1;
-		transition: 0.3s $ease;
-	}
-	&:hover:before {
-		background: $nav-hover;
-	}
+* {
+	text-align: center;
+	text-decoration: none;
+	font-family: $font;
+	color: #fff;
+}
+
+
+$pale-white: #f2f2f2;
+$black: #000;
+$white: #fff;
+
+body {
+	background: $pale-white;
 }
 
 header {
-	#circular-bg {
-		@include size(80vw, 80vw);
-		background: $header-circle-bg;
-		border-radius: 50%;
-		@extend .center;
-		z-index: -10;
-	}
+	@include size(100vw, 100vh);
+	background: $black;
+	background-image: url("https://res.cloudinary.com/prvnbist/image/upload/v1494157877/download_vzueie.jpg");
+	background-size: cover;
+	background-position: center;
 
 	#logo {
-		@include size(30px, 115px);
-		background: #000;
-		color: $white;
+		@include size(80px, 80px);
+		background: $white;
 		position: absolute;
-		top: 30px;
-
-		a {
-			display: block;
-			transform: rotate(90deg);
-			padding-left: 15px;
-			font-weight: 600;
-			font-size: 1.0rem;
-		}
+		top: 4vh;
+		left: 4vw;
 	}
 
-	nav {
-		width: 350px;
-		margin: 30px auto 0 auto;
-		a {
-			font-size: 1.5rem;
-			margin-left: 25px;
-			position: relative;
-			@extend .nav-hover;
-
-			&:first-child {
-				margin-left: 0;
-				position: relative; 
-			}
-		}
-	}
-
-	#menu-icon {
-		float: right;
-		margin: -15px 50px 0 0;
-		.bar {
-			@include size(25px, 2px);
-			background: #fff;
-			transition: 0.3s $ease;
-			&:first-child {
-				margin-bottom: 8px;
-			}
-		}
-
-		&:hover {
-			.bar:first-child {
-				transform: translateY(5px) rotate(45deg);
-			}
-			.bar:last-child{
-				transform: translateY(-5px) rotate(-45deg);
-			}
-		}
-	}
-
-	#platten {
-		font-size: 100px;
-		font-weight: 700;
-		color: $white;
-		position: absolute;
-		left: 20vw;
-		top: 15%;
-
-		&:before {
-			content: "";
-			position: absolute;
-			@include size(110%, 60px);
-			background: $nav-hover;
-			bottom: -10px;
-			left: -5%;
-			border-radius: 60px;
-			z-index: -1;
-		}
-	}
-
-	img {
-		width: 500px;
-		@extend .center;
-		top: 60%;
-	}
-
-	#headline {
-		color: $white;
-		font-size: 30px;
-		line-height: 35px;
-		text-align: left;
-		@extend .center;
-		left: 40vw;
-		top: 65%;
-
-		&:before {
-			content: "";
-			position: absolute;
-			@include size(60px, 4px);
-			background: #fff;
-			top: 22%;
-			left: -25%;
-		}
-
-		&:after {
-			content: "available in many colors";
-			position: absolute;
-			top: 110%;
-			left: 0;
-			font-size: 20px;
-			letter-spacing: 1px;
-		}
-	}
-
-	button {
-		margin-top: 80vh;
-		@include size(140px, 50px);
-		background: #c5e2cc;
-		border: none;
-		font-weight: 600;
-		border-radius: 5px;
-		font-size: 1.0rem;
-	}
-
-	#left, #right {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background: #c5e2cc;
-		@include size(60px, 60px);
+	#menu-button {
+		@include size(50px, 50px);
+		background: #1ad2c7;
 		border-radius: 50%;
-		cursor: pointer;
-		i {
-			line-height: 60px;
+		position: fixed;
+		right: 4vw;
+		top: 4vh;
+		z-index: 100;
+		transition: 0.3s ease-in-out;
+		transform-origin: center;
+		padding: 16px 0 0 12px;
+		box-shadow: 5px 5px 30px -10px rgba(0, 0, 0, 0.3);
+
+		.bar {
+			@include size (25px, 2px);
+			background: $white;
+
+			&:nth-child(2) {
+				margin: 6px 0;
+			}
 		}
 	}
+}
 
-	#right {
-		right: 7%;
+#menu-bg {
+	@include size(50px, 50px);
+	background: #1ad2c7;
+	border-radius: 50%;
+	position: fixed;
+	right: 4vw;
+	top: 4vh;
+	z-index: 10;
+	transition: 0.3s ease-in-out;
+	transform-origin: center;
+}
+
+.nav {
+	display: none;
+	@include size(30vw, auto);
+	@extend .center;
+	z-index: 50;
+	background: transparent;
+
+	a {
+		font-size: 40px;
+		display: block;
+		text-align: center;
+		padding: 20px;
+		animation: sup 0.5s linear;
+		color: $white;
+		font-weight: 600;
+		font-family: $font;
+
+		@keyframes sup {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
 	}
+}
+
+.show {
+	display: block;
+}
+
+#wrap {
+	width: 70%;
+	@extend .center;
+
+	h1 {
+		display: inline;
+		padding: 8px 10px;
+		color: $white;
+		background: #1ad2c7;
+		line-height: 40px;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width:768px) {
+ header {
+	 .nav {
+		 width:200px;
+		 a {
+			 font-size:32px;
+		 }
+	 }
+  #wrap {
+   width: 80%;
+   h1 {
+    font-size: 22px;
+   }
+  }
+ }
+}
+
+@media screen and (max-width:480px) {
+ header {
+  #wrap {
+   width: 85%;
+   h1 {
+    font-size: 20px;
+    line-height: 45px;
+   }
+  }
+ }
+}
+
+.big {
+	transform: scale(200);
+}
+
+.one {
+	transform: translateY(8px) rotate(45deg);
+	transition: 0.2s linear;
+}
+
+.two {
+	transform: scale(0);
+}
+
+.three {
+	transform: translateY(-8px) rotate(-45deg);
+	transition: 0.2s linear;
 }
