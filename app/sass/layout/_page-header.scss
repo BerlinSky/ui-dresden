@@ -1,30 +1,27 @@
 	.l-pageHeader {
-    // border: solid 2px tomato;
+    // mobile first settings
+    max-width: 736px;
+
     position: fixed;
+
     top: 0;
     left: 0;
     padding: 0;
     width: 100vw;
-    max-width: 736px;
+
     box-shadow: 0 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 
     z-index: 1000;
-    // flex: 1;
-    // flex-grow: 1;
-    // flex-basis: 100%;
+
     display: block;
+
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: space-around;
 		// align-items: stretch;
 
     .l-utilNavContainer {
-      // border: solid 2px greenyellow;
-
-      // height: 90px;
-      // width: 100%;
-
       display: flex;
       align-items: center;
 
@@ -49,8 +46,6 @@
         flex-basis: 100%;
         padding: 1rem 20% 1rem 20%;
 
-        // flex-basis: 80%;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -67,11 +62,8 @@
     .l-siteNavContainer  {
       // border: solid 2px blueviolet;
 
-      // height: 90px;
-      // width: 100%;
       background-color: #fff;
       padding: .5rem 1.5rem .5rem 1rem;
-      // padding: 1.5rem 3rem;
 
       display: flex;
       justify-content: space-between;
@@ -83,14 +75,11 @@
         cursor: pointer;
 
         .hamburgerMenuLink {
-          // transition-timing-function: ease-out;
-          // transition: 2.5s;
-          // transform: translateX(0);
           transform: rotate(0deg);
           transform-origin: 25% 50%;
           transition-timing-function: ease;
           transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-          transition: 2s;
+          transition: .5s;
 
           display: block;
           margin-left: 1rem;
@@ -108,26 +97,19 @@
         }
 
         &.s-showMenu .hamburgerMenuLink {
-            transform: rotate(270deg);
+            transform: rotate(90deg);
             transform-origin: 25% 50%;
 
             transition-timing-function: ease;
             transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-            transition: 2s;
+            transition: .5s;
         }
 
         .hamburgerCancelMenuLink { 
           display: none;
-          // transform: translateX(-150%);
-          // transition-timing-function: ease-out;
-          // transition: 2s;
-          // max-width: 0;
         }
 
         &.s-showMenu .hamburgerCancelMenuLink {
-          // transition-timing-function: ease-out;
-          // transition: max-width 3.5s;
-          // transform: translateX(0);
           display: none;
 
           // display: block;
@@ -146,42 +128,12 @@
             transform: translateY(-50%);
           }
         }        
-        // .hamburgerMenuLink {
-        //   .hamburgerMenuLink--bar {
-        //     width: 35px;
-        //     height: 7px;
-        //     background-color: black;
-        //     margin: 6px 0;
-        //   }
-        // }
-
-        // display: block;
-        // @include break(md) {
-        //   display: none;
-        // }
       }
-
-      
 
       .l-siteLogoPanel {
         // background-color: lightblue;
-        // padding: 0 15px;
-        // padding: 0 20px;
         margin: 0 auto;
         padding: 10px 10px 10px 0;
-
-        // flex: 1;
-
-        // .siteLogo {
-        //   font-family: Raleway,Helvetica,sans-serif;
-        //   font-size: 2.7rem;
-        //   // font-size: 3.2rem;
-        //   font-weight: 700;
-        //   text-align: center;
-        //   text-transform: uppercase;
-        //   color: #000;
-        //   letter-spacing: .2px;
-        // }
 
         .siteLogo {
           display: flex;
@@ -207,7 +159,6 @@
     }
 
 		@include break(md) {
-      // flex-direction: row;
 			justify-content: space-between;
 		}
 
@@ -272,5 +223,4 @@
         }
       }
     }
-
 	}

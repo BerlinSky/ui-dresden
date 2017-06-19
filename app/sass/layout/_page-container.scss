@@ -1,31 +1,16 @@
-// html, body {
-//   height: 100vh;
-// }
 
 .l-pageContainer {
-
-
-	// height: 100vh;
-  margin: 0;
-  // min-width: 320px;
-
   // Mobile-first settings:
   max-width: 736px;
-  // margin: 5vh auto 5vh auto;
 
+  background: #fff;
+  margin: 0;
+ 
 	display: flex;
 
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-
-  // flex-wrap: wrap;
-	// flex-direction: row;
-  // align-content: space-between;
-
-  // * {
-  //   flex:1 1 auto;
-  // }
 
   .l-pageContentWraper {
     margin: 0;
@@ -34,102 +19,21 @@
   }
 
   .l-pageContentWrapper {
-    // flex: 1;
-    // flex-basis: 100%;
-
-    // align-self: stretch;
 
     display: flex;
     flex-direction: column;
 
-    // .l-contentContainer {
-    //   flex: 1;
-    // }
     .l-contentSection {
       border: solid 2px yellowgreen;
 
       height: 485px;
       width: 100%;
     }
-
-  
   }
-
-  // .l-pageFooter {
-  //   flex-basis: 100%;
-  // }
 }
 
-
-// .l-pageContainer.pageContainer {
-	/* fix for firefox autocomplete positioning */
-	// position: absolute;
-	// width: 100%;
+// .l-contentFooterContainer {
+//   margin: 0;
 // }
 
-.l-contentFooterContainer {
-  margin: 0;
-}
 
-// .l-fixed-header .l-pageContentWrapper {
-// 	overflow-y: auto;
-// 	-webkit-overflow-scrolling: touch;
-// }
-
-// .l-contentHeaderContainer {
-
-// 	.l-header {
-//     min-height: 50px;
-// 		display: flex;
-// 		flex-wrap: nowrap;
-// 		justify-content: space-between;
-
-//     padding: 30px 2px;
-
-//     @include break(md) {
-//       padding: 20px;
-//     }
-
-//     .l-container {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-
-//       span.title {
-//         letter-spacing: 8px;
-//         font-weight: 700;
-//         font-size: 24px;
-//         line-height: 24px;
-//         font-family: "Montserrat", Arial, Tahoma, sans-serif;
-//         color: #009cde;
-//       }
-//     }
-
-// 		.l-breadCrumbs {
-//       display: none;
-
-//       @include break(md) {
-//         display: flex;
-//       }
-
-// 			flex-wrap: nowrap;
-// 			justify-content: flex-end;
-
-//       li {
-//         margin-left: 10px;
-//         color: #009cde;
-
-//         a {
-//           cursor: auto;
-//           font-size: 1.1rem;
-//           letter-spacing: 2px;
-//         }
-
-//         a, a:visited, a:focus {
-//           text-decoration: none;
-//           outline: 0;
-//         }
-//       }
-// 		}
-// 	}
-// }
